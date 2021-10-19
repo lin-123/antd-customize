@@ -1,1 +1,3 @@
-export { default as Foo } from './Foo';
+import './style';
+import './affix';
+import './button';
