@@ -5,7 +5,7 @@ import fs from 'fs';
 const logo =
   'http://storage.360buyimg.com/web-uc-static/find-site/rainbow-logo-nofillcolor.svg?Expires=3740809762&AccessKey=XOZfrjeQBISYqdZa&Signature=K0m39dZFbhUtDfguTpgLeiM69Ng%3D';
 export default defineConfig({
-  mfsu: {},
+  // mfsu: {}, 不好用， 现在经常有缓存
   title: 'find-react主题开发',
   favicon: logo,
   logo: logo,
