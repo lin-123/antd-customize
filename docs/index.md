@@ -29,9 +29,20 @@ order: 0
       - index.tsx // 样式入口文件
       - index.md  // demo 展示
   - style // 全局样式，改写 antd theme/default.less 样式变量
+  - tool // figma转化为css的工具
 ```
 
-2. 访问组件概览 `http://localhost:8000/gallery` 预览修改的主题
+2. figma 转化为 css
+
+- 在 figma 中 安装 [Figma styles to CSV](https://www.figma.com/community/plugin/955841494824331901/Figma-styles-to-CSV) 插件
+- 在设计稿中，右键插件选`Figma styles to CSV` 插件，复制生成好的文本
+- 粘贴在 `tool/figma.txt`中，ps:粘贴前先清空
+- 检查 `tool/figmaMap.json`文件配置，每一个设计主题对应`find-react`里的基础主题色
+- 执行 yarn figma
+- 自动生成 css 内容并复制到`src/style/index.less` 文件中
+  &emsp;
+
+3. 访问组件概览 `http://localhost:8000/gallery` 预览修改的主题
 
 ### 项目使用
 
