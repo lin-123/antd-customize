@@ -1,3 +1,5 @@
+# Button
+
 ```tsx
 import React from 'react';
 import { Button } from '@jd/find-react';

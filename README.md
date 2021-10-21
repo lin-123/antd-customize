@@ -20,7 +20,10 @@
 
 ## BACKLOG
 
-- [ ] 本项目扩展到代码逻辑层的覆盖
+- [ ] 本项目扩展到代码逻辑层的覆盖， 做个代理项目
+  - 继承 antd 所有功能
+  - 扩展组件通过重写或继承方式实现
+  - 新增组件放在代理项目
 
 ## 设计方式
 
@@ -29,7 +32,7 @@
 Install dependencies,
 
 ```bash
-$ npm i
+$ yarn
 ```
 
 Start the dev server,

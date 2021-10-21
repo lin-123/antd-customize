@@ -1,3 +1,3 @@
 import './style';
-import './affix';
-import './button';
+import './components/button';
+import './components/page-header';
