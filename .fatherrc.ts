@@ -1,7 +1,7 @@
 export default {
-  esm: 'rollup',
-  cjs: 'rollup',
-  target: 'browser',
-  lessInBabelMode: true,
-  extractCSS: true,
+  esm: 'babel',
+  cjs: 'babel',
+  // target: 'browser',
+  // lessInBabelMode: true,
+  // extractCSS: true,
 };
