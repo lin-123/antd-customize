@@ -21,11 +21,11 @@ order: 2
     - mv src lib
     - tsc build ts to js
   - 方案二： tsx 改成 js - 暂时用这个
-- [ ] 弄个脚本， figma 样式转成组件变量 推荐使用 Figma styles to CSV 插件
-  - [ ] figma 利用插件导导出所有变量，复制到<code>tool/figma.txt</code>中，执行 yarn figma 生成全局变量
-  - [ ] figma 导出组件样式， 输出到主题库
-  - [ ] 命名约束 - 组件有固定命名
-  - [ ] 有个组件概览，显示主题修改后的效果
+- [x] 弄个脚本， figma 样式转成组件变量 推荐使用 Figma styles to CSV 插件
+  - [x] figma 利用插件导导出所有变量，复制到<code>tool/figma.txt</code>中，执行 yarn figma 生成全局变量
+  - [x] figma 导出组件样式， 输出到主题库
+  - [x] 命名约束 - 组件有固定命名
+  - [x] 有个组件概览，显示主题修改后的效果
 - [x] 使用手册
   - 修改全局样式变量
   - 修改一个组件样式

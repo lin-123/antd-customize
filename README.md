@@ -27,3 +27,25 @@ Build library via `father-build`,
 ```bash
 $ npm run build
 ```
+
+## how to use
+
+in your project
+
+#### install
+
+```
+npm install @jd/find-react-theme-template
+or
+yarn add @jd/find-react-theme-template
+```
+
+### import
+
+add this line
+
+```
+import { Button, Breadcrumb, message, Popconfirm, Image, Divider } from '@jd/find-react';
+import '@jd/find-react-theme-template';
+
+```

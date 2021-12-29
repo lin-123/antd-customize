@@ -49,7 +49,7 @@ export default () => (
     <h2>通用</h2>
     <br />
     <h3>Button</h3>
-    <Button type="primary">hello</Button>
+    <Button type="primary">hello</Button> <Button type="default">hello</Button>
     <br />
     <h2>导航</h2>
     <br />
