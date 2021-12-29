@@ -36,6 +36,7 @@ import {
   SettingOutlined,
 } from '@ant-design/icons';
 import moment from 'moment';
+import './gallery.less';
 
 const { SubMenu } = Menu;
 const { Step } = Steps;
@@ -45,14 +46,18 @@ const { TabPane } = Tabs;
 export default () => (
   <div>
     <h1>京东红 @red-6</h1>
-    <br />
+
     <h2>通用</h2>
-    <br />
+
     <h3>Button</h3>
-    <Button type="primary">hello</Button> <Button type="default">hello</Button>
-    <br />
+    <Button style={{ marginRight: 8 }}>hello</Button>
+    <Button style={{ marginRight: 8 }} type="primary">
+      hello
+    </Button>
+    <Button type="danger">hello</Button>
+
     <h2>导航</h2>
-    <br />
+
     <h3>Dropdown</h3>
     <Dropdown
       overlay={
@@ -133,9 +138,9 @@ export default () => (
     </Steps>
     <h3>Pagination</h3>
     <Pagination defaultCurrent={1} total={50} />
-    <br />
+
     <h2>数据录入</h2>
-    <br />
+
     <h3>CheckBox</h3>
     <Checkbox onChange={() => {}} defaultChecked>
       Checkbox
@@ -183,9 +188,9 @@ export default () => (
         </TreeNode>
       </TreeNode>
     </TreeSelect>
-    <br />
+
     <h2>数据展示</h2>
-    <br />
+
     <h3>Card</h3>
     <Card
       title="Default size card"
@@ -256,7 +261,6 @@ export default () => (
         },
       ]}
     />
-    <br />
   </div>
 );
 ```
