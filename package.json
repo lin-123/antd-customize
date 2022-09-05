@@ -29,6 +29,7 @@
   },
   "dependencies": {
     "@jd/find-react": "^2.0.0",
+    "antd": "^4.23.0",
     "lodash": "^4.17.21",
     "react": "^16.12.0"
   },

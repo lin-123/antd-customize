@@ -1,6 +1,6 @@
-# find-react-theme-cityos
+# ant.design customize
 
-> find-react 自定义主题开发
+> 基于 antd 二开组件库
 
 ## Getting Started
 
