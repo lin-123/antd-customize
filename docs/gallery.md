@@ -38,6 +38,20 @@ import {
   SettingOutlined,
 } from '@ant-design/icons';
 
+import { Carousel } from '@jd/find-react-theme-template';
+// import React from 'react';
+
+const contentStyle = {
+  'height': '160px',
+  'color': '#fff',
+  'lineHeight': '160px',
+  'textAlign': 'center',
+  'background': '#364d79',
+};
+
+
+
+
 import { Table } from '@jd/find-react-theme-template';
 import moment from 'moment';
 import './gallery.less';
@@ -120,9 +134,25 @@ const dataSource = [
     tags: ['cool', 'teacher'],
   },
 ];
-
+ const onChange = (currentSlide) => {
+    console.log(currentSlide);
+  };
 export default () => (
   <div>
+   <Carousel afterChange={onChange}>
+      <div>
+        <h3 style={contentStyle}>1</h3>
+      </div>
+      <div>
+        <h3 style={contentStyle} >2</h3>
+      </div>
+      <div>
+        <h3 style={contentStyle}>3</h3>
+      </div>
+      <div>
+        <h3 style={contentStyle}>4</h3>
+      </div>
+    </Carousel>
     <Table dataSource={dataSource} columns={columns} />
     <h1>京东红 @red-6</h1>
 
