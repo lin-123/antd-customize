@@ -6,18 +6,32 @@ order: 2
 
 ## BACKLOG
 
+### 1.1.0
+
+- [ ] 代码里引用 find-react 改成 antd
+
+```js
+// babel.config.js
+{
+ import: 'find-react-template',
+  style:  true
+  //  or  find-react-template/xx/less
+}
+
+// 项目文件
+import { Button } from 'find-react-template'
+```
+
 - [ ] 本项目扩展到代码逻辑层的覆盖， 做个代理项目
 
   - 继承 antd 所有功能
+    - [ ] 手动遍历 antd 组件，生成代理文件
+    - [ ] node 读 antd 组件列表， 自动生成代理文件
   - 扩展组件通过重写或继承方式实现
   - 新增组件放在代理项目
+  - [x] table 代理代码模板
 
-- 初始化模板工程
-
-  - [ ] 手动遍历 antd 组件，生成代理文件
-  - [ ] node 读 antd 组件列表， 自动生成代理文件
-
-- [ ] 打包
+- [x] 打包
   - 能按需打包组件
 
 ## 1.0.0

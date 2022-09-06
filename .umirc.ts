@@ -11,6 +11,7 @@ export default defineConfig({
   logo: logo,
   outputPath: 'docs-dist',
   mode: 'doc',
+  dynamicImport: {},
   extraBabelPlugins: [
     [
       'import',
