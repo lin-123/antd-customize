@@ -7,8 +7,8 @@ const componentArr = Object.keys(antd);
 
 // 递归创建目录 异步方法
 function mkdirs(dirname, callback) {
-  fs.exists(dirname, function (exists) {
-    if (exists) {
+  fs.access(dirname, fs.constants.F_OK, function (err) {
+    if (!err) {
       callback();
     } else {
       console.log(path.dirname(dirname));
@@ -30,10 +30,10 @@ import './index.less';
 export default ${componentName};`;
 
   // 遍历生成代理component组件
-  mkdirs(`./src/component/${lodash.kebabCase(componentName)}`, () => {
+  mkdirs(`./src/components/${lodash.kebabCase(componentName)}`, () => {
     // 写content，往src/${componentName}/index.js写
     fs.writeFile(
-      `./src/component/${lodash.kebabCase(componentName)}/index.tsx`,
+      `./src/components/${lodash.kebabCase(componentName)}/index.tsx`,
       content,
       function (err) {
         if (err) {
@@ -42,7 +42,7 @@ export default ${componentName};`;
       },
     );
     fs.writeFile(
-      `./src/component/${lodash.kebabCase(componentName)}/index.less`,
+      `./src/components/${lodash.kebabCase(componentName)}/index.less`,
       '',
       function (err) {
         if (err) {
@@ -57,7 +57,7 @@ let componentList = `import './style';\r\n`;
 componentArr.map((item) => {
   generate(item);
   // 拼接组件导出目录
-  componentList += `\r\nimport ${item} from './component/${lodash.kebabCase(
+  componentList += `\r\nimport ${item} from './components/${lodash.kebabCase(
     item,
   )}';\r\nexport { ${item} };\r\n`;
 });

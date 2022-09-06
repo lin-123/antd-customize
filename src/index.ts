@@ -1,199 +1,199 @@
 import './style';
 
-import Affix from './component/affix';
+import Affix from './components/affix';
 export { Affix };
 
-import Alert from './component/alert';
+import Alert from './components/alert';
 export { Alert };
 
-import Anchor from './component/anchor';
+import Anchor from './components/anchor';
 export { Anchor };
 
-import AutoComplete from './component/auto-complete';
+import AutoComplete from './components/auto-complete';
 export { AutoComplete };
 
-import Avatar from './component/avatar';
+import Avatar from './components/avatar';
 export { Avatar };
 
-import BackTop from './component/back-top';
+import BackTop from './components/back-top';
 export { BackTop };
 
-import Badge from './component/badge';
+import Badge from './components/badge';
 export { Badge };
 
-import Breadcrumb from './component/breadcrumb';
+import Breadcrumb from './components/breadcrumb';
 export { Breadcrumb };
 
-import Button from './component/button';
+import Button from './components/button';
 export { Button };
 
-import Calendar from './component/calendar';
+import Calendar from './components/calendar';
 export { Calendar };
 
-import Card from './component/card';
+import Card from './components/card';
 export { Card };
 
-import Carousel from './component/carousel';
+import Carousel from './components/carousel';
 export { Carousel };
 
-import Cascader from './component/cascader';
+import Cascader from './components/cascader';
 export { Cascader };
 
-import Checkbox from './component/checkbox';
+import Checkbox from './components/checkbox';
 export { Checkbox };
 
-import Col from './component/col';
+import Col from './components/col';
 export { Col };
 
-import Collapse from './component/collapse';
+import Collapse from './components/collapse';
 export { Collapse };
 
-import Comment from './component/comment';
+import Comment from './components/comment';
 export { Comment };
 
-import ConfigProvider from './component/config-provider';
+import ConfigProvider from './components/config-provider';
 export { ConfigProvider };
 
-import DatePicker from './component/date-picker';
+import DatePicker from './components/date-picker';
 export { DatePicker };
 
-import Descriptions from './component/descriptions';
+import Descriptions from './components/descriptions';
 export { Descriptions };
 
-import Divider from './component/divider';
+import Divider from './components/divider';
 export { Divider };
 
-import Drawer from './component/drawer';
+import Drawer from './components/drawer';
 export { Drawer };
 
-import Dropdown from './component/dropdown';
+import Dropdown from './components/dropdown';
 export { Dropdown };
 
-import Empty from './component/empty';
+import Empty from './components/empty';
 export { Empty };
 
-import Form from './component/form';
+import Form from './components/form';
 export { Form };
 
-import Grid from './component/grid';
+import Grid from './components/grid';
 export { Grid };
 
-import Image from './component/image';
+import Image from './components/image';
 export { Image };
 
-import Input from './component/input';
+import Input from './components/input';
 export { Input };
 
-import InputNumber from './component/input-number';
+import InputNumber from './components/input-number';
 export { InputNumber };
 
-import Layout from './component/layout';
+import Layout from './components/layout';
 export { Layout };
 
-import List from './component/list';
+import List from './components/list';
 export { List };
 
-import Mentions from './component/mentions';
+import Mentions from './components/mentions';
 export { Mentions };
 
-import Menu from './component/menu';
+import Menu from './components/menu';
 export { Menu };
 
-import Modal from './component/modal';
+import Modal from './components/modal';
 export { Modal };
 
-import PageHeader from './component/page-header';
+import PageHeader from './components/page-header';
 export { PageHeader };
 
-import Pagination from './component/pagination';
+import Pagination from './components/pagination';
 export { Pagination };
 
-import Popconfirm from './component/popconfirm';
+import Popconfirm from './components/popconfirm';
 export { Popconfirm };
 
-import Popover from './component/popover';
+import Popover from './components/popover';
 export { Popover };
 
-import Progress from './component/progress';
+import Progress from './components/progress';
 export { Progress };
 
-import Radio from './component/radio';
+import Radio from './components/radio';
 export { Radio };
 
-import Rate from './component/rate';
+import Rate from './components/rate';
 export { Rate };
 
-import Result from './component/result';
+import Result from './components/result';
 export { Result };
 
-import Row from './component/row';
+import Row from './components/row';
 export { Row };
 
-import Segmented from './component/segmented';
+import Segmented from './components/segmented';
 export { Segmented };
 
-import Select from './component/select';
+import Select from './components/select';
 export { Select };
 
-import Skeleton from './component/skeleton';
+import Skeleton from './components/skeleton';
 export { Skeleton };
 
-import Slider from './component/slider';
+import Slider from './components/slider';
 export { Slider };
 
-import Space from './component/space';
+import Space from './components/space';
 export { Space };
 
-import Spin from './component/spin';
+import Spin from './components/spin';
 export { Spin };
 
-import Statistic from './component/statistic';
+import Statistic from './components/statistic';
 export { Statistic };
 
-import Steps from './component/steps';
+import Steps from './components/steps';
 export { Steps };
 
-import Switch from './component/switch';
+import Switch from './components/switch';
 export { Switch };
 
-import Table from './component/table';
+import Table from './components/table';
 export { Table };
 
-import Tabs from './component/tabs';
+import Tabs from './components/tabs';
 export { Tabs };
 
-import Tag from './component/tag';
+import Tag from './components/tag';
 export { Tag };
 
-import TimePicker from './component/time-picker';
+import TimePicker from './components/time-picker';
 export { TimePicker };
 
-import Timeline from './component/timeline';
+import Timeline from './components/timeline';
 export { Timeline };
 
-import Tooltip from './component/tooltip';
+import Tooltip from './components/tooltip';
 export { Tooltip };
 
-import Transfer from './component/transfer';
+import Transfer from './components/transfer';
 export { Transfer };
 
-import Tree from './component/tree';
+import Tree from './components/tree';
 export { Tree };
 
-import TreeSelect from './component/tree-select';
+import TreeSelect from './components/tree-select';
 export { TreeSelect };
 
-import Typography from './component/typography';
+import Typography from './components/typography';
 export { Typography };
 
-import Upload from './component/upload';
+import Upload from './components/upload';
 export { Upload };
 
-import message from './component/message';
+import message from './components/message';
 export { message };
 
-import notification from './component/notification';
+import notification from './components/notification';
 export { notification };
 
-import version from './component/version';
+import version from './components/version';
 export { version };

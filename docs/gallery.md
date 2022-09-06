@@ -28,7 +28,7 @@ import {
   Timeline,
   Tree,
   message,
-} from '@jd/find-react';
+} from 'antd';
 import {
   DownOutlined,
   MailOutlined,
