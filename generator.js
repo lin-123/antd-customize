@@ -28,7 +28,6 @@ const generate = (componentName) => {
   export default ${componentName};`;
 
   mkdirs(`./src/component/${lodash.kebabCase(componentName)}`, () => {
-    console.log('chenggong');
     // 写content，往src/${componentName}/index.js写
     fs.writeFile(
       `./src/component/${lodash.kebabCase(componentName)}/index.js`,
