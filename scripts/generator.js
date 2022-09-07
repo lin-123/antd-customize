@@ -5,8 +5,9 @@ const lodash = require('lodash');
 const componentArr = Object.keys(antd);
 
 const generate = (componentName) => {
-  const content = `import { ${componentName} } from 'antd';
-import 'antd/es/${lodash.kebabCase(componentName)}/style';
+  const filename = lodash.kebabCase(componentName);
+  const content = `import ${componentName} from 'antd/es/${filename}';
+import 'antd/es/${filename}/style';
 import './index.less';
 
 export default ${componentName};\r\n`;

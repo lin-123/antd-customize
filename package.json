@@ -1,5 +1,5 @@
 {
-  "name": "@jd/find-react-theme-template",
+  "name": "antd-customize",
   "version": "1.0.2",
   "scripts": {
     "start": "dumi dev",
@@ -29,7 +29,6 @@
     ]
   },
   "dependencies": {
-    "@jd/find-react": "^2.0.0",
     "antd": "^4.23.0",
     "react": "^16.12.0"
   },

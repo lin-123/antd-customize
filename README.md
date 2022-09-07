@@ -35,9 +35,9 @@ in your project
 #### install
 
 ```
-npm install @jd/find-react-theme-template
+npm install antd-customize
 or
-yarn add @jd/find-react-theme-template
+yarn add antd-customize
 ```
 
 ### import
@@ -45,7 +45,5 @@ yarn add @jd/find-react-theme-template
 add this line
 
 ```
-import { Button, Breadcrumb, message, Popconfirm, Image, Divider } from '@jd/find-react';
-import '@jd/find-react-theme-template';
-
+import { Button, Breadcrumb, message, Popconfirm, Image, Divider } from 'antd-customize';
 ```

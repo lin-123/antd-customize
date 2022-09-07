@@ -28,7 +28,7 @@ import {
   Timeline,
   Tree,
   message,
-} from 'antd';
+} from 'antd-customize';
 import {
   DownOutlined,
   MailOutlined,

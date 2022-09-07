@@ -11,13 +11,7 @@ import {
   MailOutlined,
   SettingOutlined,
 } from '@ant-design/icons';
-import {
-  Table,
-  Breadcrumb,
-  Menu,
-  Tag,
-  Space,
-} from '@jd/find-react-theme-template';
+import { Table, Breadcrumb, Menu, Tag, Space } from 'antd-customize';
 
 const columns = [
   {
