@@ -1,57 +1,47 @@
+/**
+ * 自动初始化代理组件库
+ *
+ */
 const fs = require('fs');
 const antd = require('antd');
 const lodash = require('lodash');
+const { argv } = require('process');
 
-const componentArr = Object.keys(antd);
+// 是否重写
+// const overwrite = argv.overwrite || false
 
-const generate = (componentName) => {
-  const filename = lodash.kebabCase(componentName);
-  const content = `import ${componentName} from 'antd/es/${filename}';
+const generate = async (componentName, filename) => {
+  const pathPrefix = `./src/${lodash.kebabCase(componentName)}`;
+
+  // 遍历生成代理component组件
+  await fs.mkdirSync(pathPrefix);
+  await fs.writeFileSync(`${pathPrefix}/index.tsx`, `import ${componentName} from 'antd/es/${filename}';
 import 'antd/es/${filename}/style';
 import './index.less';
 
-export default ${componentName};\r\n`;
+export default ${componentName};
+  `);
 
-  // 遍历生成代理component组件
-  fs.mkdir(
-    `./src/components/${lodash.kebabCase(componentName)}`,
-    { recursive: true },
-    (err) => {
-      if (err) return false;
-      // 写content，往src/${componentName}/index.js写
-      fs.writeFile(
-        `./src/components/${lodash.kebabCase(componentName)}/index.tsx`,
-        content,
-        function (err) {
-          if (err) {
-            console.log(err);
-          }
-        },
-      );
-      fs.writeFile(
-        `./src/components/${lodash.kebabCase(componentName)}/index.less`,
-        '',
-        function (err) {
-          if (err) {
-            console.log(err);
-          }
-        },
-      );
-    },
-  );
+  await fs.writeFileSync(`${pathPrefix}/index.less`, '// todo');
 };
 
-let componentList = `import './style';\r\n`;
-componentArr.map((item) => {
-  generate(item);
-  // 拼接组件导出目录
-  componentList += `\r\nimport ${item} from './components/${lodash.kebabCase(
-    item,
-  )}';\r\nexport { ${item} };\r\n`;
-});
+async function genMain() {
+  const exists = await fs.readdirSync('src');
+  const exclude = exists.reduce((pre, cur) => Object.assign(pre, { [cur]: true }), {});
+  // 过滤掉已生成文件
+  const compnentList = Object.keys(antd).filter(componentName => !exclude[lodash.kebabCase(componentName)]);
 
-fs.writeFile('./src/index.ts', componentList, function (err) {
-  if (err) {
-    console.log('生成目录失败');
-  }
-});
+  const main = compnentList.map(componentName => {
+    const filename = lodash.kebabCase(componentName);
+    generate(componentName, filename);
+
+    // 拼接组件导出目录
+    return `export { default as ${componentName} } from '/components/${filename};`;
+  }).join('\r\n');
+
+  await fs.appendFileSync('./src/index.ts', main);
+
+  console.log('初始化完成', compnentList);
+}
+
+genMain();
