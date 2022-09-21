@@ -8,6 +8,17 @@ order: 2
 
 ### 1.1.0
 
+- [ ] 本项目扩展到代码逻辑层的覆盖， 做个代理项目
+
+  - [ ] preview 卡片去调 codebase， 添加 antd 跳转
+
+  - 继承 antd 所有功能
+    - [x] 手动遍历 antd 组件，生成代理文件
+    - [x] node 读 antd 组件列表， 自动生成代理文件
+  - 扩展组件通过重写或继承方式实现
+  - 新增组件放在代理项目
+  - [x] table 代理代码模板
+
 - [x] 代码里引用 find-react 改成 antd
 
 ```js
@@ -21,16 +32,6 @@ order: 2
 // 项目文件
 import { Button } from 'find-react-template'
 ```
-
-- [ ] 本项目扩展到代码逻辑层的覆盖， 做个代理项目
-  - [ ] config-provider theme 适配
-
-  - 继承 antd 所有功能
-    - [x] 手动遍历 antd 组件，生成代理文件
-    - [x] node 读 antd 组件列表， 自动生成代理文件
-  - 扩展组件通过重写或继承方式实现
-  - 新增组件放在代理项目
-  - [x] table 代理代码模板
 
 - [x] 打包
   - 能按需打包组件

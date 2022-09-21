@@ -10,14 +10,9 @@ export default defineConfig({
   outputPath: 'docs-dist',
   mode: 'doc',
   dynamicImport: {},
-  // lessLoader: {
-  //   modifyVars: {
-  //     hack: `true;@import "${path.resolve(
-  //       __dirname,
-  //       'src/style/index.less',
-  //     )}";`,
-  //   },
-  // },
+  extraBabelPlugins: [
+    // ['import', { libraryName: 'antd', style: true }, 'antd'],
+  ],
   // exportStatic: {}, // 将所有路由输出为 HTML 目录结构，以免刷新页面时 404
   // more config: https://d.umijs.org/config
 });

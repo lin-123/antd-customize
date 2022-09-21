@@ -1,10 +1,3 @@
----
-order: 1
----
-
-# 组件概览 antd-customize
-
-```tsx
 import React, { useState } from 'react';
 import {
   AppstoreOutlined,
@@ -148,7 +141,6 @@ export default function AntdGallery() {
   const [current, setCurrent] = useState('mail');
 
   const onClick = (e) => {
-    console.log('click ', e);
     setCurrent(e.key);
   };
   return (
@@ -175,4 +167,3 @@ export default function AntdGallery() {
     </div>
   );
 }
-```

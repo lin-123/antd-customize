@@ -7,7 +7,6 @@
     "docs:deploy": "gh-pages -d docs-dist",
     "figma": "node tool/figma2css.js",
     "build": "father build",
-    "build-old": "father-build && node ./css2less.js",
     "deploy": "npm run docs:build && npm run docs:deploy",
     "release": "npm run build && npm publish",
     "prettier": "prettier --write \"**/*.{js,jsx,tsx,ts,less,md,json}\"",
@@ -30,7 +29,7 @@
   },
   "dependencies": {
     "antd": "^4.23.0",
-    "react": "^16.12.0"
+    "react": "^17.0.2"
   },
   "devDependencies": {
     "@rollup/plugin-alias": "^3.1.8",
