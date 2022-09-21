@@ -8,9 +8,13 @@ order: 2
 
 ### 1.1.0
 
-- [ ] 本项目扩展到代码逻辑层的覆盖， 做个代理项目
+- [ ] 生成 gallery demo
 
-  - [ ] preview 卡片去调 codebase， 添加 antd 跳转
+  - 从 antd 源码抓过来
+
+- [x] 本项目扩展到代码逻辑层的覆盖， 做个代理项目
+
+  - [x] preview 卡片去调 codebase， 添加 antd 跳转
 
   - 继承 antd 所有功能
     - [x] 手动遍历 antd 组件，生成代理文件

@@ -1,0 +1,16 @@
+.preview-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+
+  :global {
+    .markdown {
+      width: 100%;
+    }
+    .__dumi-default-previewer {
+      width: 48%;
+      flex-shrink: 0;
+    }
+  }
+}
