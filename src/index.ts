@@ -1,4 +1,4 @@
-import './style/index.less';
+import './style';
 export { default as Affix } from './affix';
 export { default as Alert } from './alert';
 export { default as Anchor } from './anchor';
@@ -64,4 +64,5 @@ export { default as Typography } from './typography';
 export { default as Upload } from './upload';
 export { default as message } from './message';
 export { default as notification } from './notification';
+export { default as theme } from './theme';
 export { default as version } from './version';
