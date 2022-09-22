@@ -1,6 +1,6 @@
 {
   "name": "antd-customize",
-  "version": "1.0.2",
+  "version": "0.1.0-alpha",
   "scripts": {
     "start": "dumi dev",
     "docs:build": "dumi build",
@@ -13,9 +13,9 @@
     "test": "umi-test",
     "test:coverage": "umi-test --coverage"
   },
-  "main": "dist/index.js",
-  "module": "dist/index.esm.js",
-  "typings": "dist/index.d.ts",
+  "main": "dist/esm/index.js",
+  "module": "dist/esm/index.js",
+  "typings": "dist/esm/index.d.ts",
   "gitHooks": {
     "pre-commit": "lint-staged"
   },
@@ -29,7 +29,8 @@
   },
   "dependencies": {
     "antd": "^4.23.0",
-    "react": "^17.0.2"
+    "react": "^17.0.2",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@rollup/plugin-alias": "^3.1.8",
@@ -42,6 +43,7 @@
     "lint-staged": "^10.0.7",
     "lodash": "^4.17.21",
     "prettier": "^2.2.1",
+    "rollup-plugin-require-context": "^1.0.1",
     "yorkie": "^2.0.0"
   }
 }

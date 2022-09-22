@@ -20,22 +20,27 @@ const generate = async (componentName, filename) => {
   if (overwrite) {
     const dirExist = await fs.existsSync(pathPrefix);
     if (dirExist) {
-      await fs.rmdirSync(pathPrefix);
+      await fs.rmdirSync(pathPrefix, { recursive: true, force: true });
     }
   }
   // 遍历生成代理component组件
   await fs.mkdirSync(pathPrefix);
   await fs.writeFileSync(
     `${pathPrefix}/index.tsx`,
+
     `import ${componentName} from 'antd/es/${filename}';
-import 'antd/es/${filename}/style';
 import './index.less';
 
 export default ${componentName};
-  `,
+`,
   );
 
-  await fs.writeFileSync(`${pathPrefix}/index.less`, '// todo');
+  await fs.writeFileSync(
+    `${pathPrefix}/index.less`,
+    `@import '~antd/es/button/style/index.less';
+@import '../style/index.less';
+`,
+  );
 };
 
 async function genMain() {
