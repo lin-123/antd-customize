@@ -1,21 +1,21 @@
 {
-  "private": true,
-  "name": "find-react-theme-cityos",
-  "version": "1.0.0",
+  "name": "antd-customize",
+  "version": "0.1.0-alpha",
   "scripts": {
     "start": "dumi dev",
     "docs:build": "dumi build",
     "docs:deploy": "gh-pages -d docs-dist",
-    "build": "father-build",
+    "figma": "node tool/figma2css.js",
+    "build": "father build",
     "deploy": "npm run docs:build && npm run docs:deploy",
     "release": "npm run build && npm publish",
     "prettier": "prettier --write \"**/*.{js,jsx,tsx,ts,less,md,json}\"",
     "test": "umi-test",
     "test:coverage": "umi-test --coverage"
   },
-  "main": "dist/index.js",
-  "module": "dist/index.esm.js",
-  "typings": "dist/index.d.ts",
+  "main": "dist/esm/index.js",
+  "module": "dist/esm/index.js",
+  "typings": "dist/esm/index.d.ts",
   "gitHooks": {
     "pre-commit": "lint-staged"
   },
@@ -28,18 +28,21 @@
     ]
   },
   "dependencies": {
-    "@jd/find-react": "^1.1.2",
-    "lodash": "^4.17.21",
-    "react": "^16.12.0"
+    "antd": "^4.23.0",
+    "react": "^18.0.0"
   },
   "devDependencies": {
+    "@rollup/plugin-alias": "^3.1.8",
+    "@rollup/plugin-node-resolve": "^13.0.6",
     "@umijs/test": "^3.0.5",
     "babel-plugin-import": "^1.13.3",
-    "dumi": "^1.0.14",
-    "father-build": "^1.17.2",
+    "dumi": "^1.1.0",
+    "father": "^4.0.3",
     "gh-pages": "^3.0.0",
     "lint-staged": "^10.0.7",
+    "lodash": "^4.17.21",
     "prettier": "^2.2.1",
+    "rollup-plugin-require-context": "^1.0.1",
     "yorkie": "^2.0.0"
   }
 }

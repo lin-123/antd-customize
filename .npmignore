@@ -1,1 +1,7 @@
 docs
+*.md
+scripts
+src
+.dumi
+docs-dist
+node_modules

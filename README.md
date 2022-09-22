@@ -1,51 +1,51 @@
-# find-react-theme-cityos
+# antd-customize
 
-> find-react 自定义主题开发
+> 基于 antd 二开组件库，低成本覆盖原始组件库的样式和功能，生产符合业务需要的组件库
 
-## TODO
+## 快速开发
 
-- [x] theme 覆盖 antd 原始样式
-  - 当前这种方式就可以
-- [ ] 完整引用直接引用整体包
-- [ ] 按需的直接发 src 发不上去就行
-- [ ] 弄个脚本， figma 样式转成组件变量
-  - [ ] figma 导出所有变量， 生成全局变量
-  - [ ] figma 导出组件样式， 输出到主题库
-  - [ ] 命名约束 - 组件有固定命名
-- [ ] 使用手册
-  - 修改全局样式变量
-  - 修改一个组件样式
-  - 主题发布
-  - 在项目中使用
+### 命令
 
-## BACKLOG
+- Install `$ yarn`
+- Start the dev server `$ npm start`
+- Build documentation `$ npm run docs:build`
+- Build library `$ npm run build`
 
-- [ ] 本项目扩展到代码逻辑层的覆盖
+### 目录结构
 
-## 设计方式
-
-## Getting Started
-
-Install dependencies,
-
-```bash
-$ npm i
+```js
+-docs -
+  CHANGELOG.md - // 更新日志
+  gallery.md - // 组件demo， 测试修改效果
+  src -
+  index.ts - // 入口
+  style -
+  index.less - // 代理原组件库样式， 可覆盖主题
+  affix - // 被代理组件， 其他组件类似做法
+  index.tsx - // 代理原 affix 组件， 可重写组件功能
+  index.less - // 用户覆盖原组件库样式
+  scripts -
+  generator.js - // 初始化二开组件库， 根据 antd 暴露的属性批量生成代理组件
+  fixgma2css.js; // 读取 figma 主题变量生成本组件库 less 变量
 ```
 
-Start the dev server,
+### 批量初试组件库
 
-```bash
-$ npm start
+- 追加 antd 更新 `node scripts/generator.js`
+- 批量重置组件库 `node script/generator.js overwrite`
+
+## 使用
+
+平替 antd 代理 antd 的组件能力和样式， [详见](./gallery)
+
+- install `npm install -S antd-customize` or `yarn add antd-customize`
+
+- use
+
 ```
+import { Button } from 'antd-customize';
 
-Build documentation,
-
-```bash
-$ npm run docs:build
-```
-
-Build library via `father-build`,
-
-```bash
-$ npm run build
+export default function Demo({ onClick }) {
+  return <Button onClick={onClick}>click me</Button>
+}
 ```
