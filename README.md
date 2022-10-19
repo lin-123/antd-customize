@@ -13,20 +13,20 @@
 
 ### 目录结构
 
-```js
--docs -
-  CHANGELOG.md - // 更新日志
-  gallery.md - // 组件demo， 测试修改效果
-  src -
-  index.ts - // 入口
-  style -
-  index.less - // 代理原组件库样式， 可覆盖主题
-  affix - // 被代理组件， 其他组件类似做法
-  index.tsx - // 代理原 affix 组件， 可重写组件功能
-  index.less - // 用户覆盖原组件库样式
-  scripts -
-  generator.js - // 初始化二开组件库， 根据 antd 暴露的属性批量生成代理组件
-  fixgma2css.js; // 读取 figma 主题变量生成本组件库 less 变量
+```
+- docs
+  - CHANGELOG.md  // 更新日志
+  - gallery.md  // 组件demo， 测试修改效果
+- src
+  - index.ts  // 入口
+  - style
+  - index.less  // 代理原组件库样式， 可覆盖主题
+  - affix  // 被代理组件， 其他组件类似做法
+  - index.tsx  // 代理原 affix 组件， 可重写组件功能
+  - index.less  // 用户覆盖原组件库样式
+- scripts
+  - generator.js  // 初始化二开组件库， 根据 antd 暴露的属性批量生成代理组件
+  - fixgma2css.js; // 读取 figma 主题变量生成本组件库 less 变量
 ```
 
 ### 批量初试组件库

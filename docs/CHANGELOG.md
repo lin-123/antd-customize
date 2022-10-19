@@ -9,6 +9,7 @@ order: 2
 ### 1.1.0
 
 - [ ] 验证生成后的组件可用
+  - 每个组件导出的内容都不确定，proxy 需要导出
 - [ ] 生成 gallery demo
 
   - 从 antd 源码抓过来
@@ -29,7 +30,7 @@ order: 2
 ```js
 // babel.config.js
 {
- import: 'find-react-template',
+  import: 'find-react-template',
   style:  true
   //  or  find-react-template/xx/less
 }

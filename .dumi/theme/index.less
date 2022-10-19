@@ -1,7 +1,7 @@
 .preview-wrapper {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  // justify-content: space-around;
   align-items: flex-start;
 
   :global {
@@ -9,8 +9,13 @@
       width: 100%;
     }
     .__dumi-default-previewer {
-      width: 48%;
+      // width: 48%;
       flex-shrink: 0;
+      margin-right: 16px;
+      margin-bottom: 16px;
+    }
+    .__dumi-default-previewer + .__dumi-default-previewer {
+      margin-top: auto;
     }
   }
 }

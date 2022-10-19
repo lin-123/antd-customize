@@ -4,25 +4,7 @@ order: 1
 
 # 组件概览
 
-```jsx
-/**
- * title: Button
- * description: 这是一个自定义按钮的样例， 修改了 classname 前缀， button 边框变红色
- */
-import React from 'react';
-import { Button, ConfigProvider } from 'antd-customize';
-
-ConfigProvider.config({
-  prefixCls: 'ant',
-});
-export default () => {
-  return (
-    <ConfigProvider prefixCls="ant">
-      <Button>自定义button</Button>
-    </ConfigProvider>
-  );
-};
-```
+<code src="./demo/button.tsx" />
 
 ```tsx
 /**
@@ -159,4 +141,4 @@ const App: React.FC = () => (
 export default App;
 ```
 
-<!-- <code src="./gallery.tsx"></code> -->
+<code src="./demo/table.tsx" />
